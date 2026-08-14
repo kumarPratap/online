@@ -1,0 +1,38 @@
+
+:root {
+    --background: #61747f;
+    --text: #c8cedb;
+    --accent: #8b9cff;
+    --backgroundnew:
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    background-image: rgb(59, 42, 120);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+a {
+    color: var(--accent);
+}
+
+/* clamp(MINIMUM, PREFERRED, MAXIMUM)     */
+
+h1 {
+    font-size: clamp(2.0rem, 3vw, 4rem);
+}
+
+footer{
+    background-image: radial-gradient(rgb(155, 103, 103) rgb(105, 147, 105));
+
+}
