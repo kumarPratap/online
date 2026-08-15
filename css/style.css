@@ -1,38 +1,141 @@
-
-:root {
-    --background: #61747f;
-    --text: #c8cedb;
-    --accent: #8b9cff;
-    --backgroundnew:
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 nav {
     display: flex;
-    background-image: rgb(59, 42, 120);
+    flex-direction: row;
+    background-image: linear-gradient(to right, rgb(108, 6, 15), rgba(132, 13, 212, 0.879));
 }
 
-body {
-    background-color: var(--background);
-    color: var(--text);
+main {
+    flex: 1;
 }
-
-a {
-    color: var(--accent);
-}
-
-/* clamp(MINIMUM, PREFERRED, MAXIMUM)     */
 
 h1 {
-    font-size: clamp(2.0rem, 3vw, 4rem);
+    font-size: 1.8rem;
 }
 
-footer{
-    background-image: radial-gradient(rgb(155, 103, 103) rgb(105, 147, 105));
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2vh;
+    font-family: "Playwrite DE Grund", cursive;
 
+}
+
+ul a {
+    /* color: rgb(155, 17, 197); */
+    color: rgb(241, 244, 185);
+    font-size: 1.5rem;
+}
+
+
+
+.first {
+    /* font-family: "Playwrite GB J", cursive; */
+    font-family: "Playpen Sans", cursive;
+}
+
+.content {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(134, 175, 178), rgb(135, 110, 143));
+}
+
+/* MUSIC */
+
+
+.spotify-playlists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.spotify-player-left,
+.spotify-player-right {
+    width: 45%;
+}
+
+.spotify-player-left iframe,
+.spotify-player-right iframe {
+    width: 100%;
+}
+
+
+/* YOUTUBE */
+
+.youtube-playlists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+}
+
+.youtube-player-left,
+.youtube-player-right {
+    width: 45%;
+    aspect-ratio: 16 / 10;
+}
+
+.youtube-player-left iframe,
+.youtube-player-right iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    text-align: justify;
+    width: 80vw;
+    font-size: x-large;
+    color: rgb(122, 13, 13);
+}
+
+.headings {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: rgb(16, 155, 25);
+    display: flex;
+    align-self: center;
+    margin: 0.3vw;
+    width: auto;
+}
+
+footer {
+    background-image: radial-gradient(rgb(227, 225, 106), rgb(157, 185, 151));
+    color: rgba(6, 10, 237, 0.953);
+    margin-top: auto;
+}
+
+/* make better for mobile screen */
+@media (max-width: 48rem) {
+    .youtube-player {
+        width: 90%;
+    }
 }
