@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pratap's Cosmos - A personal space for learning, exploration, engineering, web development, music, and poetry.">
+    <meta name="description" content="Pratap's Cosmos - A personal space for exploration, nature photography, engineering, web development, music, and poetry.">
     <title>Pratap's Cosmos</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
         <ul>
             <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="pages/projects.html">Projects</a></li>
-            <li><a href="pages/learning.html">Learning</a></li>
+            <li><a href="pages/library.html">Library</a></li>
             <li><a href="pages/explore.html">Explore</a></li>
             <li><a href="pages/about.html">About</a></li>
         </ul>
@@ -31,25 +31,56 @@
             “Be yourself; everyone else is already taken.”
         </blockquote>
 
-        <h2>Essays & Notes</h2>
+        <h2>Visual Feature & Soundtrack</h2>
+        <p>A glimpse into my visual collection alongside my favorite ambient soundtrack.</p>
+
+        <!-- Side-by-Side Visual Feature & Spotify Soundtrack -->
+        <div class="home-visual-grid">
+            <!-- Featured Wallpaper Showcase -->
+            <a href="pages/library.html" class="featured-wallpaper-card">
+                <div class="featured-wallpaper-img-wrap">
+                    <img src="images/Wallpaper.webp" 
+                         alt="Featured Cosmos Nature Wallpaper" 
+                         loading="lazy">
+                </div>
+                <div class="featured-wallpaper-info">
+                    <div class="featured-wallpaper-header">
+                        <h3 class="featured-wallpaper-title">Cosmos Nature Wallpaper</h3>
+                        <span class="photo-tag tag-moment">Featured</span>
+                    </div>
+                    <p class="featured-wallpaper-desc">
+                        A vibrant atmospheric shot capturing natural tones and quiet depth. Click to explore the complete photo library.
+                    </p>
+                    <div class="photo-meta" style="border: none; padding: 0; margin-top: 0.25rem;">
+                        <span class="photo-location">📍 Visual Collection</span>
+                        <span style="color: var(--terracotta); font-weight: 600;">Browse All Photos →</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Compact Companion Spotify Player -->
+            <div class="spotify-home-compact">
+                <div class="spotify-compact-header">
+                    <span class="spotify-compact-title">🎧 Cosmos Soundtrack</span>
+                    <a href="pages/music.html" style="font-size: 0.85rem; color: var(--terracotta); font-weight: 600; text-decoration: none;">More Music →</a>
+                </div>
+                <iframe data-testid="embed-iframe"
+                    src="https://open.spotify.com/embed/playlist/2ci4VnBSyLtzsbIOKfGsHv?utm_source=generator&si=2af0b192c8274faa"
+                    width="100%" height="100%"
+                    title="Spotify Playlist - Pratap's Cosmos"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <h2>Read & Listen</h2>
         <ul class="content">
+            <li><a href="pages/library.html">Visual Library & Photos</a></li>
             <li><a href="pages/why_built_websites.html">Why I Built This Website</a></li>
             <li><a href="pages/why_simple.html">Why This Website Feels So Simple</a></li>
             <li><a href="pages/music.html">Music & Soundtracks</a></li>
             <li><a href="pages/poetry.html">Poetry & Reflections</a></li>
         </ul>
-
-        <section class="music">
-            <h2>Soundtrack</h2>
-            <div class="spotify_home">
-                <iframe data-testid="embed-iframe"
-                    src="https://open.spotify.com/embed/playlist/2ci4VnBSyLtzsbIOKfGsHv?utm_source=generator&si=2af0b192c8274faa"
-                    width="100%" height="352"
-                    title="Spotify Playlist - Pratap's Cosmos"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-            </div>
-        </section>
     </main>
 
     <footer>

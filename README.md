@@ -45,11 +45,13 @@ online/
 │
 ├── pages/
 │   ├── projects.html          # Projects
-│   ├── learning.html          # Learning resources/notes
-│   ├── lab.html               # Experiments and testing
-│   ├── notes.html             # Notes and knowledge
+│   ├── library.html           # Visual Library & Nature Moments gallery
 │   ├── explore.html           # Interesting discoveries
-│   └── about.html             # About the website / me
+│   ├── about.html             # About the website / me
+│   ├── music.html             # Music playlists
+│   ├── poetry.html            # Poetry and creative work
+│   ├── notes.html             # Notes and knowledge base
+│   └── lab.html               # Experiments and testing
 │
 ├── css/
 │   └── style.css              # Shared website styling
