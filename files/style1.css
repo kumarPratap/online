@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, rgb(108, 6, 15), rgba(132, 13, 212, 0.879));
+    padding: 1rem;
+}
+
+.headings {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: bolder;
+    color: rgb(16, 155, 25);
+    display: flex;
+    align-self: center;
+    margin-bottom: 1rem;
+    width: auto;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+nav ul a {
+    color: rgb(241, 244, 185);
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    display: block;
+    text-align: center;
+}
+
+nav ul a:hover,
+nav ul a:focus {
+    background-color: rgba(241, 244, 185, 0.15);
+    outline: none;
+}
+
+/* MAIN CONTENT */
+main {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+}
+
+blockquote {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-style: italic;
+    color: rgb(122, 13, 13);
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    padding: 1rem;
+    border-left: 4px solid rgb(108, 6, 15);
+    padding-left: 1.5rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    margin: 1.5rem 0 1rem 0;
+}
+
+h2 {
+    font-size: clamp(1.25rem, 4vw, 1.8rem);
+    margin: 1.5rem 0 1rem 0;
+    color: rgb(108, 6, 15);
+}
+
+/* CONTENT LIST */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-image: linear-gradient(rgb(134, 175, 178), rgb(135, 110, 143));
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.content li {
+    list-style: none;
+}
+
+.content a {
+    color: rgb(16, 10, 100);
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    display: block;
+}
+
+.content a:hover,
+.content a:focus {
+    background-color: rgba(16, 10, 100, 0.1);
+    text-decoration: underline;
+    outline: none;
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 2px solid rgb(108, 6, 15);
+    opacity: 0.3;
+}
+
+/* MUSIC SECTION */
+.music {
+    margin: 2rem 0;
+}
+
+.spotify_home {
+    width: 100%;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.spotify_home iframe {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* SPOTIFY PLAYLISTS */
+.spotify-playlists {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+
+.spotify-player-left,
+.spotify-player-right {
+    width: 100%;
+}
+
+.spotify-player-left iframe,
+.spotify-player-right iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* YOUTUBE PLAYLISTS */
+.youtube-playlists {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.youtube-player-left,
+.youtube-player-right {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.youtube-player-left iframe,
+.youtube-player-right iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* PARAGRAPH TEXT */
+p {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem;
+    text-align: justify;
+    width: 100%;
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    color: rgb(122, 13, 13);
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+/* FOOTER */
+footer {
+    background-image: radial-gradient(rgb(227, 225, 106), rgb(157, 185, 151));
+    color: rgba(6, 10, 237, 0.953);
+    margin-top: auto;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets (768px and up) */
+@media (min-width: 48rem) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .headings {
+        margin-bottom: 0;
+        flex: 0 1 auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 70%;
+        gap: 0;
+    }
+
+    nav ul a {
+        padding: 0.5rem 1rem;
+        text-align: center;
+    }
+
+    main {
+        padding: 2rem 2rem;
+    }
+
+    blockquote {
+        padding: 1.5rem 2rem;
+        padding-left: 2rem;
+        margin: 2rem 0;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+
+    .spotify-playlists {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .spotify-player-left,
+    .spotify-player-right {
+        width: 48%;
+    }
+
+    .youtube-playlists {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .youtube-player-left,
+    .youtube-player-right {
+        width: 48%;
+    }
+
+    p {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+}
+
+/* Large screens (1024px and up) */
+@media (min-width: 64rem) {
+    main {
+        padding: 2.5rem 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    p {
+        width: 85%;
+        font-size: 1.1rem;
+    }
+
+    .content {
+        padding: 2.5rem;
+        border-radius: 12px;
+    }
+
+    .spotify_home {
+        max-width: 600px;
+    }
+
+    footer {
+        padding: 2.5rem;
+    }
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    nav ul a,
+    .content a {
+        transition: none;
+    }
+}
