@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visual Library - Pratap's Cosmos. Real nature photo clicks, wallpapers, landscape views, and quiet moments.">
+    <title>Library - Pratap's Cosmos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="headings"><a href="../index.html">Pratap's Cosmos</a></div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="library.html" aria-current="page">Library</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Visual Library</h1>
+
+        <div class="gallery-intro">
+            <p>
+                A visual collection of genuine photos I took — green countryside fields, peaceful water ponds, outdoor trails, wallpapers, and quiet moments.
+            </p>
+            <p>
+                Click any photo to open it in full view.
+            </p>
+        </div>
+
+        <!-- Section: Featured Visuals & Art -->
+        <section>
+            <h2>Featured Visuals</h2>
+            <p>Wallpapers and scenic visual moments.</p>
+
+            <div class="photo-grid">
+                <!-- Wallpaper -->
+                <article class="photo-card">
+                    <div class="photo-img-container" onclick="openLightbox(this)">
+                        <img src="../images/Wallpaper.webp" 
+                             alt="Featured Nature Wallpaper"
+                             data-caption="Cosmos Wallpaper — High-definition visual artwork and nature aesthetic."
+                             loading="lazy">
+                    </div>
+                    <div class="photo-info">
+                        <h3 class="photo-title">Cosmos Wallpaper</h3>
+                        <p class="photo-desc">A vibrant visual wallpaper blending atmosphere and nature tones.</p>
+                        <div class="photo-meta">
+                            <span class="photo-tag tag-moment">Wallpaper</span>
+                            <span class="photo-location">📍 Visual Art</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Paddy Field -->
+                <article class="photo-card">
+                    <div class="photo-img-container" onclick="openLightbox(this)">
+                        <img src="../images/paddy field tribal.webp" 
+                             alt="Lush green paddy fields in rural village"
+                             data-caption="Green Paddy Fields — Fresh greenery stretching across the countryside."
+                             loading="lazy">
+                    </div>
+                    <div class="photo-info">
+                        <h3 class="photo-title">Green Paddy Fields</h3>
+                        <p class="photo-desc">Fresh green fields stretching across the rural landscape after rain.</p>
+                        <div class="photo-meta">
+                            <span class="photo-tag tag-forest">Countryside</span>
+                            <span class="photo-location">📍 Rural Fields</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section: Nature & Greenery -->
+        <section>
+            <h2>Nature & Waters</h2>
+            <p>Lush fields, peaceful woods, and quiet reflections.</p>
+
+            <div class="photo-grid">
+                <!-- Mirror Pond -->
+                <article class="photo-card">
+                    <div class="photo-img-container" onclick="openLightbox(this)">
+                        <img src="../images/Mirror pond.jpg" 
+                             alt="Calm water pond reflecting trees and sky"
+                             data-caption="Mirror Pond — Still water creating a clean reflection of the surrounding trees."
+                             loading="lazy">
+                    </div>
+                    <div class="photo-info">
+                        <h3 class="photo-title">Mirror Pond</h3>
+                        <p class="photo-desc">Still water reflecting the surrounding trees and blue sky on a quiet day.</p>
+                        <div class="photo-meta">
+                            <span class="photo-tag tag-water">Waters</span>
+                            <span class="photo-location">📍 Quiet Pond</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Forest Walk -->
+                <article class="photo-card">
+                    <div class="photo-img-container" onclick="openLightbox(this)">
+                        <img src="../images/meinforest.webp" 
+                             alt="Standing in the deep green forest"
+                             data-caption="Forest Walk — Walking through the quiet trees and deep greenery."
+                             loading="lazy">
+                    </div>
+                    <div class="photo-info">
+                        <h3 class="photo-title">Into the Forest</h3>
+                        <p class="photo-desc">Walking along the shaded trail surrounded by tall trees and fresh air.</p>
+                        <div class="photo-meta">
+                            <span class="photo-tag tag-forest">Forest Trail</span>
+                            <span class="photo-location">📍 Woodlands</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section: Hills & Trails -->
+        <section>
+            <h2>Hills & Trails</h2>
+            <p>Open horizons and outdoor paths.</p>
+
+            <div class="photo-grid">
+                <!-- Mountain Horizons -->
+                <article class="photo-card">
+                    <div class="photo-img-container" onclick="openLightbox(this)">
+                        <img src="../images/mountain.webp" 
+                             alt="Hills and mountain horizon view"
+                             data-caption="Mountain Horizons — Open skies and distant hills during an evening trek."
+                             loading="lazy">
+                    </div>
+                    <div class="photo-info">
+                        <h3 class="photo-title">Mountain Horizons</h3>
+                        <p class="photo-desc">Open skies and soft layers of distant hills during an evening trip.</p>
+                        <div class="photo-meta">
+                            <span class="photo-tag tag-mountain">Hills</span>
+                            <span class="photo-location">📍 Hill View</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Mountain Bike Trail -->
+                <article class="photo-card">
+                    <div class="photo-img-container" onclick="openLightbox(this)">
+                        <img src="../images/montain_bike.webp" 
+                             alt="Mountain bike on a scenic outdoor trail"
+                             data-caption="Trail Ride — Pausing by the dirt path during a bike ride."
+                             loading="lazy">
+                    </div>
+                    <div class="photo-info">
+                        <h3 class="photo-title">Trail Ride</h3>
+                        <p class="photo-desc">Taking a quick break along the trail to enjoy the view.</p>
+                        <div class="photo-meta">
+                            <span class="photo-tag tag-trail">Adventure</span>
+                            <span class="photo-location">📍 Trail Ride</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- City Motion / Traffic -->
+                <article class="photo-card">
+                    <div class="photo-img-container" onclick="openLightbox(this)">
+                        <img src="../images/traffic_landscape .webp" 
+                             alt="Evening traffic and street lights"
+                             data-caption="Evening Road — Warm evening traffic lights as the sun sets."
+                             loading="lazy">
+                    </div>
+                    <div class="photo-info">
+                        <h3 class="photo-title">Evening Motion</h3>
+                        <p class="photo-desc">Vehicles and warm sunset colors blending together on the highway.</p>
+                        <div class="photo-meta">
+                            <span class="photo-tag tag-moment">Urban Dusk</span>
+                            <span class="photo-location">📍 Evening Road</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 15 August Cute -->
+                <article class="photo-card">
+                    <div class="photo-img-container" onclick="openLightbox(this)">
+                        <img src="../images/15august_cute.webp" 
+                             alt="Cute festive moment on 15th August"
+                             data-caption="15th August Moment — A joyful memory from Independence Day."
+                             loading="lazy">
+                    </div>
+                    <div class="photo-info">
+                        <h3 class="photo-title">15th August Moment</h3>
+                        <p class="photo-desc">A joyful, heartwarming snapshot captured during Independence Day.</p>
+                        <div class="photo-meta">
+                            <span class="photo-tag tag-moment">Celebration</span>
+                            <span class="photo-location">📍 15 August</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <blockquote>
+            Simple moments captured on simple days.
+        </blockquote>
+    </main>
+
+    <!-- Lightbox Modal Viewer -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" aria-label="Close photo view" onclick="closeLightbox(event)">✕</button>
+        <div class="lightbox-img-wrapper" onclick="event.stopPropagation()">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Pratap Kumar · All rights reserved. <br>
+            Last updated: <time datetime="2026-08-16">16 August 2026</time>
+        </p>
+    </footer>
+
+    <script>
+        function openLightbox(container) {
+            const img = container.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxCaption.textContent = img.getAttribute('data-caption') || img.alt;
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
