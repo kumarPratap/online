@@ -436,9 +436,8 @@ hr {
 .spotify-home-compact iframe {
     display: block;
     width: 100%;
-    height: 100%;
-    min-height: 500px;
-    flex: 1;
+    height: 352px;
+    min-height: unset;
     border: none;
 }
 
@@ -806,13 +805,235 @@ footer time {
     color: var(--text-primary);
     font-weight: 500;
 }
+
+/* Footer Social Links */
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.925rem;
+}
+
+.footer-socials a {
+    color: var(--burgundy);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: all 0.2s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--terracotta);
+    text-decoration: underline;
+}
+
+.footer-sep {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
 .pending{
     font-size: larger;
     color: red;
-    
 }
 
+/* Poetry Highlight Card on Home Page */
+.poetry-highlight-section {
+    margin: 2.25rem 0 2.5rem 0;
+}
 
+.poetry-highlight-card {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.poetry-highlight-card:hover {
+    box-shadow: 0 6px 22px rgba(36, 30, 25, 0.1);
+}
+
+.poetry-highlight-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.poetry-header-titles {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+}
+
+.poetry-highlight-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--burgundy);
+    margin: 0;
+}
+
+.poetry-highlight-link {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: var(--terracotta);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.poetry-highlight-link:hover {
+    color: var(--terracotta-hover);
+    text-decoration: underline;
+}
+
+.poetry-highlight-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.15rem;
+}
+
+.youtube-player-home {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--surface-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.youtube-player-home iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Instagram Embed Styling */
+.home-instagram-section,
+.instagram-section,
+.poetry-instagram-section {
+    margin: 2.5rem 0;
+}
+
+.instagram-embed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.instagram-embed-container .instagram-media {
+    margin: 0 auto !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid var(--surface-border) !important;
+    box-shadow: var(--shadow-card) !important;
+}
+
+/* Social Media Connect Section */
+.social-connect-section {
+    margin: 2.75rem 0 1.5rem 0;
+    padding-top: 0.5rem;
+}
+
+.social-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.75rem 1.4rem;
+    background-color: var(--surface);
+    color: var(--burgundy) !important;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-sans);
+    font-size: 0.975rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+    background-color: var(--surface-hover);
+    border-color: var(--terracotta);
+    color: var(--burgundy) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.social-btn.linkedin-btn:hover {
+    border-color: #0a66c2;
+    color: #0a66c2 !important;
+}
+
+.social-btn.instagram-btn:hover {
+    border-color: #e1306c;
+    color: #e1306c !important;
+}
+
+.social-icon {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.social-btn:hover .social-icon {
+    transform: scale(1.1);
+}
+
+/* Profile Card Social Links */
+.profile-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 0.75rem;
+}
+
+.profile-social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    background-color: var(--bg-alt);
+    color: var(--burgundy) !important;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.profile-social-btn:hover {
+    background-color: var(--surface-hover);
+    border-color: var(--terracotta);
+    color: var(--terracotta) !important;
+    transform: translateY(-1px);
+}
 
 /* Responsive Mobile Styles */
 @media (max-width: 48rem) {
@@ -863,6 +1084,14 @@ footer time {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+    }
+
+    .profile-social-links {
+        justify-content: center;
+    }
+
+    .social-buttons-container {
+        flex-direction: column;
     }
 
     .spotify-playlists,
