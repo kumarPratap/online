@@ -143,6 +143,13 @@ a:hover {
 }
 
 /* Navigation Bar - Sleek, Dark & Full-Width Evenly Distributed */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
 nav {
     position: sticky;
     top: 0;
@@ -446,6 +453,30 @@ hr {
     border: none;
 }
 
+.featured-wallpaper-meta {
+    border: none !important;
+    padding: 0 !important;
+    margin-top: 0.4rem !important;
+}
+
+.browse-photos-cta {
+    color: var(--terracotta);
+    font-weight: 600;
+}
+
+.spotify-more-link {
+    font-size: 0.85rem;
+    color: var(--terracotta);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.spotify-more-link:hover {
+    color: var(--terracotta-hover);
+    text-decoration: underline;
+}
+
 /* Profile Photo Showcase */
 .profile-card {
     display: flex;
@@ -516,6 +547,11 @@ hr {
     overflow: hidden;
     background-color: var(--bg-alt);
     cursor: zoom-in;
+}
+
+.photo-img-container:focus-visible {
+    outline: 3px solid var(--terracotta);
+    outline-offset: -3px;
 }
 
 .photo-img-container img {
