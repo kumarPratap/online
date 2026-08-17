@@ -3,8 +3,6 @@
    Simple, clean, distraction-free typography and layouts
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600&family=Short+Stack&display=swap');
-
 :root {
     /* Color Palette */
     --bg: #e7e3db;
@@ -77,7 +75,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: var(--font-secondary);
+    font-family: var(--font-sans);
     font-size: 1.075rem;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
@@ -244,7 +242,7 @@ blockquote {
     border-right: 1px solid var(--surface-border);
     border-bottom: 1px solid var(--surface-border);
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
-    padding: 1.25rem 1.rem;
+    padding: 1.25rem 1rem;
     margin: 2rem 0;
     font-size: 1.7rem;
     font-style: italic;
@@ -332,7 +330,7 @@ hr {
 /* Side-by-Side Visual Feature & Compact Spotify Layout on Homepage */
 .home-visual-grid {
     display: grid;
-    grid-template-columns: minmax(1.9, 1fr) minmax(280px, 1fr);
+    grid-template-columns: 1.5fr 1fr;
     gap: 1.5rem;
     align-items: stretch;
     margin: 1.75rem 0 2.5rem 0;
@@ -1087,7 +1085,7 @@ footer time {
     }
 
     .headings {
-        font-size: 7.45rem;
+        font-size: 1.45rem;
     }
 
     nav ul {
