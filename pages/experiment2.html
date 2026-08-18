@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment here</title>
+    <style>
+        nav {
+            background-color: rgb(120, 177, 151);
+            gap: 20px;
+            display: flex;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            padding: 0;
+        }
+        nav li {
+            /* Older method to make items horizontal */
+            margin-right: 200px;
+        }
+
+        nav a {
+            font: 100;
+            color: rgb(80, 10, 10);
+            font-size: larger;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            padding: 0px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<!-- ! CSS GRID PLAYGROUND -->
+
+<body>
+
+    <header>
+        <nav>
+            <div class="headings"><a href="index.html">Pratap's Cosmos</a></div>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="pages/projects.html">Projects</a></li>
+                <li><a href="pages/library.html">Library</a></li>
+                <li><a href="pages/explore.html">Explore</a></li>
+                <li><a href="pages/experiment2.html">Lab</a></li>
+                <li><a href="pages/about.html">About</a></li>
+            </ul>
+        </nav>
+        <h1> Digital Lab </h1>
+        <hr>
+    </header>
+
+    <section class="projects">
+
+        <article class="card">
+            <h2>Project 1</h2>
+            <p>My first web project.</p>
+        </article>
+
+        <article class="card">
+            <h2>Project 2</h2>
+            <p>A JavaScript project.</p>
+        </article>
+
+        <article class="card">
+            <h2>Project 3</h2>
+            <p>A CSS experiment.</p>
+        </article>
+
+        <article class="card">
+            <h2>Project 4</h2>
+            <p>A calculator.</p>
+        </article>
+
+        <article class="card">
+            <h2>Project 5</h2>
+            <p>A portfolio.</p>
+        </article>
+
+        <article class="card">
+            <h2>Project 6</h2>
+            <p>A learning project.</p>
+        </article>
+
+    </section>
+
+</body>
+
+</html>
