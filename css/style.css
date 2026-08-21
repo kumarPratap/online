@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Mali:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Short+Stack&display=swap');
+
 /* ==========================================================================
-   PRATAP'S COSMOS - LIGHT SCHOLARLY & LITERARY DESIGN SYSTEM
-   Simple, clean, distraction-free typography and layouts
+   PRATAP'S COSMOS - WARM SCHOLARLY & LITERARY DESIGN SYSTEM
+   Simple, clean, warm typography with connected handwriting text
    ========================================================================== */
 
 :root {
@@ -12,10 +14,10 @@
     --surface-border: #c7b594;
     --surface-border-hover: #c4b59b;
 
-    --text-primary: #99094c;
-    --text-secondary: #4737ae;
-    --text-muted: #534536;
-
+    /* Text Tones: Natural Blue Pen Ink for Handwriting */
+    --text-primary: #081ab6;
+    --text-secondary: #0740d2; /* Classic Blue Ink Pen */
+    --text-muted: #2a0bd5;
 
     --burgundy: #6b1d1d;
     --burgundy-hover: #501414;
@@ -45,10 +47,9 @@
     /* Typography */
     --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-secondary: 'Short Stack', cursive;
+    --font-handwriting: 'Chilanka', 'Mali', 'Short Stack', cursive;
+    --font-secondary: 'Chilanka', 'Mali', 'Short Stack', cursive;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-
-
 
     /* Header & Shadows */
     --nav-bg: rgba(250, 248, 243, 0.94);
@@ -117,10 +118,12 @@ h3 {
 }
 
 p {
+    font-family: var(--font-handwriting);
     color: var(--text-secondary);
-    font-size: 1.075rem;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 1.75;
     margin: 0 0 1.25rem 0;
+    letter-spacing: 0.01em;
 }
 
 strong {
@@ -643,9 +646,387 @@ hr {
     gap: 0.25rem;
 }
 
+/* Project Showcase & Feature Cards */
+.project-card {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--surface-border-hover);
+}
+
+.project-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--burgundy);
+    margin: 0;
+}
+
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.75rem 0;
+}
+
+.tech-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background-color: var(--bg-alt);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+body.dark-mode .tech-badge {
+    background-color: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   FIELD JOURNAL & WORKSHOP STYLES (DIGITAL NOTEBOOK ARCHITECTURE)
+   ========================================================================== */
+
+/* Journal Hero Header */
+.journal-hero {
+    margin-bottom: 2.75rem;
+    position: relative;
+}
+
+.journal-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    background: var(--bg-alt);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.85rem;
+    border: 1px dashed var(--surface-border);
+}
+
+.journal-manifesto {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: var(--burgundy);
+    font-style: italic;
+    margin: 1rem 0 1.5rem 0;
+    padding-left: 1.15rem;
+    border-left: 3px solid var(--gold);
+}
+
+/* Journal Chapter / Section Divider Header */
+.journal-chapter-header {
+    margin: 3.25rem 0 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.journal-chapter-num {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--terracotta);
+    font-weight: 700;
+}
+
+.journal-chapter-title {
+    font-family: var(--font-serif);
+    font-size: 1.65rem;
+    color: var(--burgundy);
+    margin: 0;
+    border-bottom: 1px solid var(--surface-border);
+    padding-bottom: 0.4rem;
+}
+
+.journal-chapter-subtitle {
+    font-family: var(--font-handwriting);
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+/* Field Notebook Project Sheet */
+.journal-entry {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-lg);
+    padding: 1.85rem 2rem;
+    margin: 1.75rem 0;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.journal-entry:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--surface-border-hover);
+}
+
+.journal-entry-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px dashed var(--surface-border);
+}
+
+.journal-entry-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.entry-index {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--terracotta);
+    background-color: var(--bg-alt);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+}
+
+.organic-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.2rem 0.7rem;
+    border-radius: var(--radius-full);
+}
+
+.badge-growing {
+    background-color: var(--emerald-subtle);
+    color: var(--emerald);
+    border: 1px solid rgba(35, 101, 59, 0.2);
+}
+
+.badge-workshop {
+    background-color: var(--amber-subtle);
+    color: var(--amber);
+    border: 1px solid rgba(180, 83, 9, 0.2);
+}
+
+.badge-rooted {
+    background-color: var(--sky-subtle);
+    color: var(--sky);
+    border: 1px solid rgba(3, 105, 161, 0.2);
+}
+
+.badge-horizon {
+    background-color: var(--rose-subtle);
+    color: var(--rose);
+    border: 1px solid rgba(190, 18, 60, 0.2);
+}
+
+.journal-entry-title {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--burgundy);
+    margin: 0.25rem 0 0.85rem 0;
+}
+
+/* Journal Entry Structured Field Blocks */
+.journal-field-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.15rem 0;
+}
+
+.journal-field-block {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--terracotta);
+    padding: 0.85rem 1.15rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.journal-field-label {
+    font-family: var(--font-mono);
+    font-size: 0.725rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--terracotta);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.journal-field-text {
+    font-family: var(--font-handwriting);
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0 !important;
+}
+
+/* Marginalia Handwritten Note between Sections */
+.marginalia-container {
+    display: flex;
+    justify-content: center;
+    margin: 2.75rem 0;
+}
+
+.marginalia-note {
+    position: relative;
+    background: var(--surface);
+    border: 1px dashed var(--surface-border);
+    padding: 1rem 1.75rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(36, 30, 25, 0.04);
+    max-width: 620px;
+    width: 100%;
+    transform: rotate(-0.5deg);
+    transition: transform 0.2s ease;
+}
+
+.marginalia-note:hover {
+    transform: rotate(0deg) scale(1.01);
+}
+
+.marginalia-tape {
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 18px;
+    background: rgba(200, 185, 160, 0.45);
+    border: 1px solid rgba(180, 160, 130, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.marginalia-text {
+    font-family: var(--font-handwriting);
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Builder's Log Timeline */
+.builders-log-section {
+    margin: 3.5rem 0 2rem 0;
+    padding: 1.75rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-lg);
+}
+
+.log-timeline {
+    position: relative;
+    padding-left: 1.75rem;
+    margin: 1.5rem 0 0.5rem 0;
+    border-left: 2px dashed var(--surface-border);
+}
+
+.log-entry {
+    position: relative;
+    margin-bottom: 1.75rem;
+}
+
+.log-entry:last-child {
+    margin-bottom: 0;
+}
+
+.log-dot {
+    position: absolute;
+    left: -2.35rem;
+    top: 0.35rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--terracotta);
+    border: 2px solid var(--surface);
+}
+
+.log-date {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+.log-thought {
+    font-family: var(--font-handwriting);
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Colophon Closing Section */
+.journal-closing {
+    margin: 3.5rem 0 1rem 0;
+    text-align: center;
+    padding: 2.25rem 1.5rem;
+    border-top: 1px solid var(--surface-border);
+    border-bottom: 1px solid var(--surface-border);
+    background: var(--bg-alt);
+    border-radius: var(--radius-lg);
+}
+
+.journal-closing-title {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    color: var(--burgundy);
+    margin-bottom: 0.65rem;
+}
+
+.journal-closing-body {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: var(--text-primary);
+    max-width: 600px;
+    margin: 0 auto 1.25rem auto;
+    font-style: italic;
+}
+
 /* Media Sections & Embeds */
 section {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 .spotify_home,
@@ -1084,22 +1465,20 @@ footer time {
 }
 
 .clickhere a {
-
     color: #b70888;
     font-size: medium;
 }
 
 .clickhere a:hover {
-    color: blue;
+    color: var(--terracotta);
     text-decoration: underline;
-    transition: all 1s;
+    transition: all 0.3s ease;
 }
 
 .clickhereyoutube {
     display: flex;
     flex-direction: row;
     gap: 10vw;
-
 }
 
 .clickhereyoutube a {
@@ -1109,69 +1488,489 @@ footer time {
 
 .clickhereyoutube a:hover {
     color: #b60b52;
-    transition: all 0.6s ease-in-out; 
+    transition: all 0.6s ease-in-out;
 }
 
-/* Responsive Mobile Styles */
+/* === DARK MODE TOGGLE BUTTON IN NAV === */
+.theme-toggle-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 1.3rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: scale(1.1);
+}
+
+/* === SMOOTH TRANSITIONS FOR DARK MODE === */
+body {
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* === FULL DARK MODE THEME === */
+body.dark-mode {
+    --bg: #0f0f13;
+    --bg-alt: #1a1a22;
+    --surface: #1e1e2a;
+    --surface-hover: #2a2a38;
+    --surface-border: #2e2e40;
+    --surface-border-hover: #3d3d55;
+
+    --text-primary: #bfdbfe;
+    --text-secondary: #93c5fd; /* Soft Blue Ink in Dark Mode */
+    --text-muted: #8899b5;
+
+    --burgundy: #d4848e;
+    --burgundy-hover: #e8a0aa;
+    --terracotta: #d47a5a;
+    --terracotta-hover: #e8926e;
+    --gold: #c9a055;
+    --gold-subtle: rgba(201, 160, 85, 0.2);
+
+    --emerald: #4ade80;
+    --emerald-subtle: rgba(74, 222, 128, 0.12);
+    --sky: #38bdf8;
+    --sky-subtle: rgba(56, 189, 248, 0.12);
+    --amber: #fbbf24;
+    --amber-subtle: rgba(251, 191, 36, 0.12);
+    --rose: #fb7185;
+    --rose-subtle: rgba(251, 113, 133, 0.12);
+    --sunset: #f97316;
+    --sunset-subtle: rgba(249, 115, 22, 0.12);
+
+    --nav-bg: rgba(15, 15, 19, 0.97);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-card: 0 3px 10px rgba(0, 0, 0, 0.5);
+
+    background-color: var(--bg);
+    color: var(--text-secondary);
+}
+
+/* Nav in dark mode */
+body.dark-mode nav {
+    background: #0d1b2a;
+    border-bottom-color: rgba(100, 120, 180, 0.3);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .headings a {
+    color: #fde68a;
+}
+
+body.dark-mode nav a {
+    color: #93c5fd;
+}
+
+body.dark-mode nav a:hover {
+    color: #c4b5fd;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode nav a[aria-current="page"] {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    box-shadow: 0 2px 10px rgba(124, 58, 237, 0.5);
+}
+
+/* Toggle button in dark mode */
+body.dark-mode .theme-toggle-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Blockquote in dark mode */
+body.dark-mode blockquote {
+    background-color: var(--surface);
+    border-left-color: var(--terracotta);
+    border-top-color: var(--surface-border);
+    border-right-color: var(--surface-border);
+    border-bottom-color: var(--surface-border);
+    color: var(--text-primary);
+}
+
+/* Cards, surfaces in dark mode */
+body.dark-mode .content li a,
+body.dark-mode .profile-card,
+body.dark-mode .photo-card,
+body.dark-mode .featured-wallpaper-card,
+body.dark-mode .spotify-home-compact,
+body.dark-mode .spotify_home,
+body.dark-mode .spotify-home,
+body.dark-mode .spotify-player-left,
+body.dark-mode .spotify-player-right,
+body.dark-mode .youtube-player-left,
+body.dark-mode .youtube-player-right,
+body.dark-mode .poetry-highlight-card,
+body.dark-mode .project-card,
+body.dark-mode .journal-entry,
+body.dark-mode .marginalia-note,
+body.dark-mode .builders-log-section,
+body.dark-mode .journal-closing,
+body.dark-mode .info-card {
+    background-color: var(--surface);
+    border-color: var(--surface-border);
+}
+
+body.dark-mode .journal-header-badge,
+body.dark-mode .entry-index,
+body.dark-mode .journal-field-block {
+    background-color: var(--bg-alt);
+    border-color: var(--surface-border);
+}
+
+body.dark-mode .marginalia-tape {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .badge-growing {
+    background-color: var(--emerald-subtle);
+    color: #86efac;
+    border-color: rgba(134, 239, 172, 0.2);
+}
+
+body.dark-mode .badge-workshop {
+    background-color: var(--amber-subtle);
+    color: #fde047;
+    border-color: rgba(253, 224, 71, 0.2);
+}
+
+body.dark-mode .badge-rooted {
+    background-color: var(--sky-subtle);
+    color: #7dd3fc;
+    border-color: rgba(125, 211, 252, 0.2);
+}
+
+body.dark-mode .badge-horizon {
+    background-color: var(--rose-subtle);
+    color: #fda4af;
+    border-color: rgba(253, 164, 175, 0.2);
+}
+
+body.dark-mode .content li a:hover {
+    background-color: var(--surface-hover);
+    border-color: var(--terracotta);
+}
+
+body.dark-mode .spotify-compact-header,
+body.dark-mode .featured-wallpaper-img-wrap {
+    background-color: var(--bg-alt);
+}
+
+/* Footer in dark mode */
+body.dark-mode footer {
+    border-top-color: var(--surface-border);
+    color: var(--text-muted);
+}
+
+body.dark-mode footer a {
+    color: var(--text-secondary);
+}
+
+body.dark-mode footer a:hover {
+    color: var(--terracotta-hover);
+}
+
+/* HR dividers */
+body.dark-mode hr {
+    border-top-color: var(--surface-border);
+}
+
+/* Photo meta border */
+body.dark-mode .photo-meta {
+    border-top-color: var(--surface-border);
+    color: var(--text-muted);
+}
+
+/* Links in dark mode */
+body.dark-mode a {
+    color: var(--terracotta);
+}
+
+body.dark-mode a:hover {
+    color: var(--terracotta-hover);
+}
+
+body.dark-mode nav a,
+body.dark-mode .headings a {
+    text-decoration: none;
+}
+
+.social-btn.github-btn:hover {
+    border-color: #333;
+    color: #333 !important;
+}
+
+body.dark-mode .social-btn.github-btn:hover {
+    border-color: #e6edf3;
+    color: #e6edf3 !important;
+}
+
+/* Footer Icon Styling */
+.footer-icon {
+    vertical-align: middle;
+    flex-shrink: 0;
+    margin-right: 0.15rem;
+}
+
+/* Footer Live Clock */
+.footer-live-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin: 0.65rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+}
+
+body.dark-mode .footer-live-clock {
+    color: var(--text-muted);
+}
+
+
+/* ===================================================================
+   RESPONSIVE MOBILE STYLES — Mobile First Optimized
+   =================================================================== */
 @media (max-width: 48rem) {
+
+    /* --- Navigation: Top line Brand + Toggle, Single Line Links below --- */
     nav {
-        flex-direction: column;
-        padding: 0.1rem 0rem;
-        gap: 0.9rem;
-    }
-
-    .headings {
-        font-size: 1.45rem;
-    }
-
-    nav ul {
+        display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0.75rem 0.4rem 0.75rem;
+        row-gap: 0.35rem;
+        column-gap: 0.5rem;
+        width: 100%;
+    }
+
+    /* Top line: Brand Title + Theme Toggle */
+    .headings {
+        font-size: 1.25rem;
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .headings a {
+        font-size: 1.25rem;
+        gap: 0.35rem;
+        white-space: nowrap;
+    }
+
+    .theme-toggle-btn {
+        order: 2;
+        font-size: 1.1rem;
+        padding: 0.25rem 0.5rem;
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    /* Second line: All Navigation Links in ONE single full-width line */
+    nav ul {
+        order: 3;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.2rem 0 0 0;
+        margin: 0;
+        list-style: none;
+        gap: 0.15rem;
+    }
+
+    nav li {
+        flex: 1;
+        text-align: center;
+        display: flex;
         justify-content: center;
-        gap: 0.35rem 0.45rem;
     }
 
     nav a {
-        font-size: 1.0rem;
-        padding: 0.35rem 0.65rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 0.25rem 0.15rem;
+        border-radius: var(--radius-sm);
+        white-space: nowrap;
+        letter-spacing: -0.01em;
     }
 
+    /* --- Main Content Area --- */
     /* padding : TOP → RIGHT → BOTTOM → LEFT */
     main {
-        padding: 0rem 1.15rem 1rem 1.15rem;
+        padding: 0.75rem 1rem 2rem 1rem;
     }
 
+    /* --- Typography --- */
+    h1 {
+        font-size: 1.6rem;
+        margin: 1.25rem 0 0.75rem 0;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin: 1.5rem 0 0.55rem 0;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    p {
+        font-family: var(--font-handwriting);
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin: 0 0 1rem 0;
+    }
+
+    li {
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+
+    /* --- Blockquote: Compact & Minimalist on Mobile --- */
+    blockquote {
+        width: auto;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.95rem;
+        line-height: 1.45;
+        margin: 0.6rem 0 1rem 0;
+        border-left-width: 3px;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    /* --- Home Visual Grid --- */
     .home-visual-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
 
-    h1 {
-        font-size: 1.85rem;
+    .featured-wallpaper-img-wrap {
+        height: 180px;
     }
 
-    h2 {
-        font-size: 1.4rem;
+    .featured-wallpaper-title {
+        font-size: 1.05rem;
     }
 
+    .featured-wallpaper-desc {
+        font-size: 0.85rem;
+    }
+
+    /* --- Spotify compact --- */
+    .spotify-compact-title {
+        font-size: 0.95rem;
+    }
+
+    .spotify-more-link {
+        font-size: 0.78rem;
+    }
+
+    .spotify-compact-header {
+        padding: 0.65rem 0.85rem;
+        flex-direction: column;
+        gap: 0.35rem;
+        align-items: flex-start;
+    }
+
+    /* --- Photo Gallery --- */
     .photo-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.25rem;
     }
 
+    .photo-title {
+        font-size: 1.05rem;
+    }
+
+    .photo-desc {
+        font-size: 0.88rem;
+    }
+
+    .photo-meta {
+        font-size: 0.78rem;
+    }
+
+    /* --- Profile Card --- */
     .profile-card {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: 0.85rem;
+        padding: 1rem;
+    }
+
+    .profile-avatar {
+        width: 85px;
+        height: 85px;
+    }
+
+    .profile-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .profile-info p {
+        font-size: 0.88rem;
     }
 
     .profile-social-links {
         justify-content: center;
+        gap: 0.5rem;
     }
 
+    .profile-social-btn {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    /* --- Social Connect Section --- */
     .social-buttons-container {
         flex-direction: column;
+        gap: 0.75rem;
     }
 
+    .social-btn {
+        font-size: 0.9rem;
+        padding: 0.65rem 1.1rem;
+        justify-content: center;
+    }
+
+    /* --- Content Link Cards --- */
+    .content li a {
+        padding: 0.85rem 1rem;
+        font-size: 0.975rem;
+    }
+
+    /* --- Poetry Highlight --- */
+    .poetry-highlight-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .poetry-highlight-title {
+        font-size: 1.1rem;
+    }
+
+    .poetry-highlight-desc {
+        font-size: 0.88rem;
+    }
+
+    /* --- Media Players --- */
     .spotify-playlists,
     .youtube-playlists {
         flex-direction: column;
@@ -1185,9 +1984,92 @@ footer time {
         width: 100%;
     }
 
-    blockquote {
-        width: auto;
-        padding: 2px;
+    .poetry .youtube-player-left {
+        max-width: 100%;
+    }
 
+    /* --- Instagram Embed --- */
+    .instagram-embed-container {
+        margin: 1rem 0;
+    }
+
+    /* --- Footer --- */
+    footer {
+        padding: 1.75rem 1rem;
+    }
+
+    .footer-socials {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        font-size: 0.85rem;
+    }
+
+    .footer-socials a {
+        font-size: 0.85rem;
+        gap: 0.25rem;
+    }
+
+    .footer-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .footer-live-clock {
+        font-size: 0.75rem;
+    }
+
+    footer p {
+        font-size: 0.82rem;
+    }
+
+    /* --- Field Journal & Notebook Mobile --- */
+    .journal-entry {
+        padding: 1.25rem 1.15rem;
+        margin: 1.5rem 0;
+    }
+
+    .journal-chapter-title {
+        font-size: 1.35rem;
+    }
+
+    .journal-chapter-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .journal-entry-title {
+        font-size: 1.25rem;
+    }
+
+    .journal-field-block {
+        padding: 0.75rem 0.85rem;
+    }
+
+    .journal-field-text {
+        font-size: 1.05rem;
+    }
+
+    .marginalia-note {
+        padding: 0.85rem 1.15rem;
+    }
+
+    .marginalia-text {
+        font-size: 1.025rem;
+    }
+
+    .builders-log-section {
+        padding: 1.15rem;
+    }
+
+    .log-thought {
+        font-size: 1.05rem;
+    }
+
+    .journal-closing {
+        padding: 1.75rem 1rem;
+    }
+
+    /* --- HR dividers --- */
+    hr {
+        margin: 1.75rem 0;
     }
 }

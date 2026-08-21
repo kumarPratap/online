@@ -20,8 +20,7 @@ function sayHello() {
     console.log("Hello! Welcome to JavaScript!");
 }
 //function Called here
-
-console.log(sayHello());
+sayHello();
 
 // 4. SIMPLE CALCULATOR FUNCTION
 function addNumbers(a, b) {
@@ -72,7 +71,7 @@ function setupButton() {
         button.style.color = "white";
     });
 }
-setupButton();
+// setupButton(); // (Commented out so it doesn't conflict with the button logic below)
 
 // 7. ARRAY - list of items
 
@@ -156,20 +155,48 @@ myHeading.textContent = "I have learned C language, HTML and CSS";
 myHeading.style.color = "green";
 
 
-//Hide the heading.
+// ==========================================
+// 10. SINGLE BUTTON: TOGGLE HEADING & COUNT CLICKS
+// ==========================================
 
-const myHeader= document.querySelector('h1');
-const button   = document.querySelector('button');
+const myHeader = document.querySelector('h1');
+const button = document.getElementById('actionBtn');
+const countDisplay = document.getElementById('click-count');
 
+// Initialize click counter variable
+let clickCount = 0;
+
+// One button click triggers both actions cleanly
 button.addEventListener('click', function () {
-    toggleHeading(); // call the toggle
+    // 1. Toggle heading visibility (hide if shown, show if hidden)
+    myHeader.style.display = (myHeader.style.display === "none") ? "block" : "none";
+
+    // 2. Increment the click count
+    clickCount++;
+
+    // 3. Update the text on the web page
+    countDisplay.textContent = `Button clicked ${clickCount} times`;
+
+    // 4. Log to console for debugging
+    console.log(`Button clicked! Total clicks: ${clickCount}`);
+    // Change heading color
+    myHeader.style.color = "blue";
 });
 
-function toggleHeading() {
-    myHeader.style.display = myHeader.style.display === "none" ? "block" : "none";
-}
+// ==========================================
+// 11. DARK MODE BUTTON
+// ==========================================
 
+const themeBtn = document.getElementById('themeBtn');
 
-// Count how many times the button was clicked.
+themeBtn.addEventListener('click', function () {
+    // 1. Toggle dark mode class on body
+    document.body.classList.toggle('dark-mode');
 
-
+    // 2. Update button label depending on current mode
+    if (document.body.classList.contains('dark-mode')) {
+        themeBtn.textContent = "☀️ Light Mode";
+    } else {
+        themeBtn.textContent = "🌙 Dark Mode";
+    }
+});
