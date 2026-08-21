@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600&family=Short+Stack&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600&family=Chilanka&family=Mali:ital,wght@0,400;0,600;1,400&family=Short+Stack&display=swap"
         rel="stylesheet">
 </head>
 
@@ -32,70 +32,377 @@
                 <li><a href="explore.html">Explore</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
+            <button id="themeBtn" class="theme-toggle-btn" aria-label="Toggle dark mode">🌙</button>
         </nav>
     </header>
 
     <main>
-        <h1>Projects</h1>
-
-        <p>
-            Things I'm building, testing, and tinkering with. Each project is an experiment to learn new skills by
-            getting hands-on with code.
-        </p>
-
-        <section>
-            <h2>Pratap's Cosmos</h2>
-            <p>
-                My personal website built with clean HTML5 and CSS3. Focused on high speed, natural readability, genuine
-                nature photos, and zero tracker bloat.
+        <!-- Hero Section: The Workshop & Field Journal Manifesto -->
+        <header class="journal-hero">
+            <span class="journal-header-badge">📓 Field Journal & Workshop · Vol. 01</span>
+            <h1>The Workbench: Experiments, Builds & Living Notes</h1>
+            <p class="journal-manifesto">
+                “This space is not a showcase of completed trophies. It is an evolving workshop — a record of curiosity, what broke along the way, the lessons learned, and the small ideas quietly taking root.”
             </p>
-            <p><strong>Stack:</strong> HTML5, CSS3, GitHub Pages.</p>
-        </section>
+            <p>
+                Every project below is part of an ongoing journey into web development, creative video editing, computer science, and systems. Rather than viewing software as static products, I treat them as living plants in a digital garden.
+            </p>
+            <p>
+                👉 For my active daily study roadmap, visit the <a href="ongoing_project.html"><strong>Live Learning & Development Track →</strong></a>
+            </p>
+        </header>
 
+        <!-- Chapter 1: Currently Growing & Active Builds -->
         <section>
-            <h2>Frontend Experiments</h2>
-            <p>Prototypes and interactive layouts I've created while learning CSS and JavaScript:</p>
-            <ul>
-                <li>Responsive photo galleries with custom lightbox modals</li>
-                <li>CSS Grid and fluid typography without heavy frameworks</li>
-                <li>Clean reading layouts and scholarly color systems</li>
-            </ul>
+            <div class="journal-chapter-header">
+                <span class="journal-chapter-num">Chapter 01</span>
+                <h2 class="journal-chapter-title">🌱 Currently Growing (Active Builds)</h2>
+                <span class="journal-chapter-subtitle">Projects on the workbench right now — evolving through daily iteration.</span>
+            </div>
+
+            <!-- Project 01: Pratap's Cosmos -->
+            <article class="journal-entry">
+                <div class="journal-entry-top">
+                    <div class="journal-entry-meta">
+                        <span class="entry-index">ENTRY #01</span>
+                        <span class="organic-badge badge-growing">🌿 In Active Flow</span>
+                    </div>
+                    <time class="photo-meta" datetime="2026-08">Active Since July 2026</time>
+                </div>
+
+                <h3 class="journal-entry-title">Pratap's Cosmos — Personal Digital Garden</h3>
+
+                <div class="journal-field-grid">
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Genesis (Why I Built It)</span>
+                        <p class="journal-field-text">
+                            I wanted a quiet, distraction-free corner of the web that felt like a well-worn paper notebook rather than a sterile corporate portfolio. No templates, no UI frameworks, no tracking cookies — just pure HTML5, CSS3, and vanilla JavaScript.
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Epiphany & What I Learned</span>
+                        <p class="journal-field-text">
+                            Building a theme toggle with persistent <code>localStorage</code> and designing a mobile-first navigation bar taught me that simplicity in design requires deep intentionality in code. Removing CSS bloat made the site feel alive.
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">On The Workbench Next</span>
+                        <p class="journal-field-text">
+                            Refining reading typography, introducing interactive code callouts, and expanding the visual photograph library.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-tech-stack">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3 Custom Props</span>
+                    <span class="tech-badge">Vanilla JS</span>
+                    <span class="tech-badge">Mobile-First</span>
+                    <span class="tech-badge">GitHub Pages</span>
+                </div>
+            </article>
+
+            <!-- Marginalia Note 1 -->
+            <div class="marginalia-container">
+                <div class="marginalia-note">
+                    <div class="marginalia-tape"></div>
+                    <p class="marginalia-text">
+                        “Spent an entire evening adjusting font sizes and line heights until the paragraph text felt like real handwritten blue ink on warm paper.”
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 02: Interactive Lab -->
+            <article class="journal-entry">
+                <div class="journal-entry-top">
+                    <div class="journal-entry-meta">
+                        <span class="entry-index">ENTRY #02</span>
+                        <span class="organic-badge badge-growing">🌱 Sprouting & Tinkering</span>
+                    </div>
+                    <time class="photo-meta" datetime="2026-08">Active Experiment</time>
+                </div>
+
+                <h3 class="journal-entry-title">Interactive Frontend & Lab Playground</h3>
+
+                <div class="journal-field-grid">
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Genesis (Why I Built It)</span>
+                        <p class="journal-field-text">
+                            A sandbox to break things without fear. Created to master modern CSS Grid, DOM state manipulation, and interactive event listeners through small, focused UI experiments.
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Epiphany & What Surprised Me</span>
+                        <p class="journal-field-text">
+                            Modern CSS can handle complex responsive grids and fluid scaling natively without needing heavy JavaScript libraries. Less code creates faster, more resilient experiences.
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">On The Workbench Next</span>
+                        <p class="journal-field-text">
+                            Building lightweight engineering formulas calculators and keyboard-accessible interactive modals.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-tech-stack">
+                    <span class="tech-badge">DOM Manipulation</span>
+                    <span class="tech-badge">CSS Grid Layouts</span>
+                    <span class="tech-badge">Event Handling</span>
+                    <span class="tech-badge">UI Prototyping</span>
+                </div>
+            </article>
         </section>
 
+        <!-- Chapter 2: The Creative Studio -->
         <section>
-            <h2>Video Editing</h2>
-            <p>Exploring Video Editing as a Creative Hobby</p>
-            <ul>
-                <li>Learning Final Cut Pro through hands-on projects.</li>
-                <li> Exploring video editing and storytelling.</li>
-                <li> Practicing transitions, effects, and creative workflows.</li>
-            </ul>
+            <div class="journal-chapter-header">
+                <span class="journal-chapter-num">Chapter 02</span>
+                <h2 class="journal-chapter-title">🎬 The Studio (Creative Craft & Video)</h2>
+                <span class="journal-chapter-subtitle">Where code meets rhythm, voice, spoken-word poetry, and visual pacing.</span>
+            </div>
+
+            <!-- Project 03: Final Cut Pro Video Editing -->
+            <article class="journal-entry">
+                <div class="journal-entry-top">
+                    <div class="journal-entry-meta">
+                        <span class="entry-index">ENTRY #03</span>
+                        <span class="organic-badge badge-workshop">🛠 Crafting & Refining</span>
+                    </div>
+                    <time class="photo-meta" datetime="2026-08">Ongoing Creative Practice</time>
+                </div>
+
+                <h3 class="journal-entry-title">Apple Final Cut Pro — Cinematic Poetry & Storytelling</h3>
+
+                <div class="journal-field-grid">
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Genesis (Why I Do It)</span>
+                        <p class="journal-field-text">
+                            Poetry and literature come alive when paired with intentional visual rhythm. I use Final Cut Pro to produce cinematic recitation videos, blending ambient soundscapes, field footage, and spoken verse.
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Epiphany & Core Technique</span>
+                        <p class="journal-field-text">
+                            Editing video is musical composition. The silence between spoken lines dictates the cut just as much as the words. Balancing audio multi-tracks and grading color tones creates an emotional world for the listener.
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">On The Workbench Next</span>
+                        <p class="journal-field-text">
+                            Mastering custom LUTs for nature footage, refined sound design foley, and kinetic typography overlays for Instagram and YouTube shorts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-tech-stack">
+                    <span class="tech-badge">Final Cut Pro</span>
+                    <span class="tech-badge">Audio Post-Production</span>
+                    <span class="tech-badge">Color Grading & LUTs</span>
+                    <span class="tech-badge">Kinetic Typography</span>
+                    <span class="tech-badge">YouTube & Reels</span>
+                </div>
+            </article>
+
+            <!-- Marginalia Note 2 -->
+            <div class="marginalia-container">
+                <div class="marginalia-note">
+                    <div class="marginalia-tape"></div>
+                    <p class="marginalia-text">
+                        “Deleted 400 lines of CSS today. The website felt lighter immediately. Subtraction is almost always the best design decision.”
+                    </p>
+                </div>
+            </div>
         </section>
 
+        <!-- Chapter 3: The Horizon -->
         <section>
-            <h2>Computer Science</h2>
-            <ul>
-                <li>Data structure implementations in C and C++</li>
-                <li>Algorithm benchmarks and search utilities</li>
-                <li>Productivity scripts for daily workflows</li>
-            </ul>
+            <div class="journal-chapter-header">
+                <span class="journal-chapter-num">Chapter 03</span>
+                <h2 class="journal-chapter-title">🌌 The Horizon (Upcoming Inquiries)</h2>
+                <span class="journal-chapter-subtitle">Concepts, architectures, and systems I am preparing to build next.</span>
+            </div>
+
+            <!-- Roadmap 01: Full Stack -->
+            <article class="journal-entry">
+                <div class="journal-entry-top">
+                    <div class="journal-entry-meta">
+                        <span class="entry-index">ENTRY #04</span>
+                        <span class="organic-badge badge-horizon">🌌 Upcoming Inquiry</span>
+                    </div>
+                    <time class="photo-meta">Late 2026 Roadmap</time>
+                </div>
+
+                <h3 class="journal-entry-title">Full-Stack Web Architecture (MERN Stack)</h3>
+
+                <div class="journal-field-grid">
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Inquiry</span>
+                        <p class="journal-field-text">
+                            Transitioning from static frontend foundations into stateful, database-driven systems. Exploring React component hierarchies, RESTful API design with Node/Express, and document modeling in MongoDB.
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">Target Milestone</span>
+                        <p class="journal-field-text">
+                            Architecting a full-stack personal knowledge repository with user authentication, dynamic search indexing, and real-time data persistence.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-tech-stack">
+                    <span class="tech-badge">React.js</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Express.js</span>
+                    <span class="tech-badge">MongoDB</span>
+                    <span class="tech-badge">REST APIs</span>
+                </div>
+            </article>
+
+            <!-- Roadmap 02: Python -->
+            <article class="journal-entry">
+                <div class="journal-entry-top">
+                    <div class="journal-entry-meta">
+                        <span class="entry-index">ENTRY #05</span>
+                        <span class="organic-badge badge-horizon">🌌 Upcoming Inquiry</span>
+                    </div>
+                    <time class="photo-meta">Late 2026 Roadmap</time>
+                </div>
+
+                <h3 class="journal-entry-title">Python Programming, Scripting & Automation</h3>
+
+                <div class="journal-field-grid">
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Inquiry</span>
+                        <p class="journal-field-text">
+                            Deepening core computer science concepts through Python — focusing on Object-Oriented Programming (OOP), file automation utilities, data parsing, and classic algorithmic problem solving.
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">Target Milestone</span>
+                        <p class="journal-field-text">
+                            Building daily automation scripts that streamline workflow tasks, alongside a repository of benchmarked data structures.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-tech-stack">
+                    <span class="tech-badge">Python 3</span>
+                    <span class="tech-badge">Automation Scripts</span>
+                    <span class="tech-badge">Data Structures</span>
+                    <span class="tech-badge">Algorithms</span>
+                </div>
+            </article>
+
+            <!-- Roadmap 03: Networks & Security -->
+            <article class="journal-entry">
+                <div class="journal-entry-top">
+                    <div class="journal-entry-meta">
+                        <span class="entry-index">ENTRY #06</span>
+                        <span class="organic-badge badge-horizon">🌌 Upcoming Inquiry</span>
+                    </div>
+                    <time class="photo-meta">Late 2026 Roadmap</time>
+                </div>
+
+                <h3 class="journal-entry-title">Computer Networking & Cyber Security Lab</h3>
+
+                <div class="journal-field-grid">
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">The Inquiry</span>
+                        <p class="journal-field-text">
+                            Understanding how the global internet functions at the wire level: TCP/IP protocols, DNS resolution, and routing. Connecting networking fundamentals to defensive web security (OWASP Top 10, cryptography, and network defense).
+                        </p>
+                    </div>
+
+                    <div class="journal-field-block">
+                        <span class="journal-field-label">Target Milestone</span>
+                        <p class="journal-field-text">
+                            Performing hands-on packet inspection with Wireshark and building secure client-server network socket utilities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-tech-stack">
+                    <span class="tech-badge">TCP/IP</span>
+                    <span class="tech-badge">OSI Model</span>
+                    <span class="tech-badge">Wireshark</span>
+                    <span class="tech-badge">OWASP Top 10</span>
+                    <span class="tech-badge">Network Defense</span>
+                </div>
+            </article>
         </section>
 
-        <blockquote>
-            Build something, see where it breaks, and make it better.
-        </blockquote>
+        <!-- Chapter 4: The Builder's Journal Timeline -->
+        <section class="builders-log-section">
+            <h2 style="border-bottom: none; margin-top: 0;">📓 Builder's Field Notes & Moments</h2>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Short, candid notes from the desk — documenting small breakthroughs and epiphanies along the way:
+            </p>
+
+            <div class="log-timeline">
+                <div class="log-entry">
+                    <div class="log-dot"></div>
+                    <span class="log-date">July 2026</span>
+                    <p class="log-thought">
+                        “Wrote the first lines of HTML and CSS for Pratap's Cosmos. The joy of seeing raw text transform into a readable layout in a browser never gets old.”
+                    </p>
+                </div>
+
+                <div class="log-entry">
+                    <div class="log-dot"></div>
+                    <span class="log-date">August 2026</span>
+                    <p class="log-thought">
+                        “Built the dark mode engine using CSS custom properties and localStorage. Solved layout shifts on mobile by creating a dedicated two-tier navbar.”
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing Manifesto Colophon -->
+        <footer class="journal-closing">
+            <h3 class="journal-closing-title">A Living Record of Curiosity</h3>
+            <p class="journal-closing-body">
+                “This website is not a gallery of finished work. It is a record of curiosity. Every project began with one simple question: <em>‘What happens if I try?’</em>”
+            </p>
+            <p style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted); margin: 0;">
+                Handmade with HTML5, CSS3 & Vanilla JavaScript · Constantly Growing
+            </p>
+        </footer>
     </main>
 
     <footer>
         <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/heykumarpratap/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/heykumarpratap/" target="_blank" rel="noopener noreferrer">
+                <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                LinkedIn
+            </a>
             <span class="footer-sep">·</span>
-            <a href="https://www.instagram.com/pratap_kumar_30/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://github.com/kumarPratap" target="_blank" rel="noopener noreferrer">
+                <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <span class="footer-sep">·</span>
+            <a href="https://www.instagram.com/pratap_kumar_30/" target="_blank" rel="noopener noreferrer">
+                <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.667.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                Instagram
+            </a>
+        </div>
+        <div class="footer-live-clock">
+            <span>🕐</span> <span id="liveClock"></span>
         </div>
         <p>© 2026 Pratap Kumar · All rights reserved. <br>
-            Last updated: <time datetime="2026-08-17">17 August 2026</time>
+            Last updated: <time datetime="2026-08-21">21 August 2026</time>
         </p>
     </footer>
+    <script src="../javaScript.js"></script>
 </body>
 
 </html>
