@@ -200,3 +200,59 @@ themeBtn.addEventListener('click', function () {
         themeBtn.textContent = "🌙 Dark Mode";
     }
 });
+
+// ==========================================
+// 12. DOM = Document Object Model Practice
+// ==========================================
+// Tasks:
+// 1. Select the <h1> using getElementById().
+// 2. Print its text to the console.
+// 3. Select all paragraphs using querySelectorAll().
+// 4. Print each paragraph's text using forEach().
+// 5. Change the color of every paragraph to green.
+
+let myText = document.getElementById('h1');
+myText.textContent;
+console.log(h1);
+
+let mine = document.getElementById("title");
+console.log('mine');
+
+// Exercise 1
+ ÷<h1 id="heading">Hello</h1>
+//  Select it.
+// Print only its text.
+// Change the text to "Hi".
+// Change the color to "blue".
+let myHeading = document.getElementById(heading);
+console.log (myHeading.textcontent);
+myHeading.textcontent = "Hi";
+myHeading.style.color ="blue";
+// comment
+// <p class="city">Delhi</p>
+// <p class="city">Mumbai</p>
+// <p class="city">Hyderabad</p>
+// thiss
+
+// Select all paragraphs.
+// Print each city's name.
+// Change every paragraph color to "purple".
+
+let myParagraphs = document.getElementsByClassName(".class");
+myParagraphs.forEach (currentParagraph => {  
+console.log (currentParagraph.textcontent);
+currentParagraph.style.color = "purple";
+
+ });
+
+// Exercise 3
+
+ let colors = ["Red", "Green", "Blue"];
+
+//   Print each color using forEach().
+
+colors.forEach ( myColor => {
+    myColor.style.color = ("[colors[0]");
+}
+
+);
