@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+    <style>
+        .active {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="heading">Hello World</h1>
+        <p id="para">
+            I love JavaScript.
+        </p>
+        <input type="text" id="username" value="Harry">
+    </div>
+    <img id="photo" src="cat.png" width="250">
+
+    <div id="box">Hello</div>
+    <p id="message">Hello World</p>
+
+    <img id="photos" src="cat.png">
+
+
+    <script>
+        let myHeading = document.getElementById("heading");
+        myHeading.textContent = "Welcome to JavScript";
+
+        let para = document.getElementById("para");
+        para.style.color = "blue";
+        para.style.fontSize = "25px";
+
+        let myInput = document.getElementById("username");
+        myInput.value = "pratap";
+
+        let myPet = document.getElementById("photo");
+        myPet.setAttribute("src", "dog.png");
+        //Add the class active
+
+        let myClass = document.getElementById("box");
+
+        if (!myClass.classList.contains("active")) {
+            myClass.classList.add("active")
+
+            let myText = document.getElementById("message");
+            myText.style.color = "white";
+            myText.style.backgroundColor = "black";
+            myText.style.fontSize = "40px";
+            
+            let photos=document.getElementById("photos");
+            consle.log(photos.getAttribute("src"));
+e
+        }
+
+    </script>
+</body>
+
+</html>
