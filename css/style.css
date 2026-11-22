@@ -146,7 +146,7 @@ a:hover {
 }
 
 /* Navigation Bar - Sleek, Dark & Full-Width Evenly Distributed */
-header {
+body > header {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -154,9 +154,6 @@ header {
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
     background: #05416e;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);

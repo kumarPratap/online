@@ -1,7 +1,7 @@
-// This is a comment - it explains what the code does
-// Comments are very important for learning!
+This is a comment - it explains what the code does
+Comments are very important for learning!
 
-// 1. VARIABLES - storing data
+1. VARIABLES - storing data
 let myName = "Pratap Kumar"; // Change this to your name!
 let age = 26; // Change this to your age
 let isLearningJavaScript = true; // true or false (boolean)

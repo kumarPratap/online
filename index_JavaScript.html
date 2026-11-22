@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Learning</title>
+    <link rel="stylesheet" href="css/javaScript.css">
+
+</head>
+//Tasks:
+// 1. Select the <h1> using getElementById().
+// 2. Print its text to the console.
+// 3. Select all paragraphs using querySelectorAll().
+// 4. Print each paragraph's text using forEach().
+// 5. Change the color of every paragraph to green.
+
+<body>
+    <h1 id="title">Learning DOM</h1>
+
+    <p class="course">HTML</p>
+    <p class="course">CSS</p>
+    <p class="course">JavaScript</p>
+
+    <script>
+        let myHeading = document.getElementById("title");
+        console.log(myHeading.textContent);
+        myHeading.textContent = "Learning Web Development";
+
+        let myParagraph = document.querySelectorAll(".course");
+        myParagraph.forEach(course => {
+            console.log(course);
+            myParagrap.style.
+        });
+
+
+    </script>
+</body>
+
+</html>
