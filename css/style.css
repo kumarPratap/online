@@ -1366,6 +1366,128 @@ footer time {
     box-shadow: var(--shadow-card) !important;
 }
 
+/* Cosmic Map & Space Explorer Component */
+.cosmic-map-card {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem;
+    margin: 2.75rem 0;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+}
+
+.cosmic-map-card:hover {
+    box-shadow: 0 8px 24px rgba(36, 30, 25, 0.12);
+}
+
+.cosmic-map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cosmic-map-title {
+    font-size: 1.25rem;
+    color: var(--burgundy);
+    margin: 0.3rem 0;
+}
+
+.cosmic-map-desc {
+    font-family: var(--font-handwriting);
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+}
+
+.cosmic-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.cosmic-tab-btn {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45rem 0.9rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--surface-border);
+    background-color: var(--bg);
+    color: var(--burgundy);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cosmic-tab-btn:hover {
+    background-color: var(--surface-hover);
+    border-color: var(--terracotta);
+    color: var(--terracotta);
+}
+
+.cosmic-tab-btn.active {
+    background: linear-gradient(135deg, #b45309 0%, #9a3412 100%);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 2px 8px rgba(180, 83, 9, 0.35);
+}
+
+.cosmic-map-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--surface-border);
+    background-color: #0b0f19;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.cosmic-map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.cosmic-links-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--surface-border);
+    font-size: 0.88rem;
+}
+
+.cosmic-links-label {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--burgundy);
+}
+
+.cosmic-ext-link {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--terracotta);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.cosmic-ext-link:hover {
+    color: var(--terracotta-hover);
+    text-decoration: underline;
+}
+
 /* Social Media Connect Section */
 .social-connect-section {
     margin: 2.75rem 0 1.5rem 0;
@@ -1610,9 +1732,31 @@ body.dark-mode .journal-entry,
 body.dark-mode .marginalia-note,
 body.dark-mode .builders-log-section,
 body.dark-mode .journal-closing,
-body.dark-mode .info-card {
+body.dark-mode .info-card,
+body.dark-mode .cosmic-map-card {
     background-color: var(--surface);
     border-color: var(--surface-border);
+}
+
+body.dark-mode .cosmic-tab-btn {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    border-color: var(--surface-border);
+}
+
+body.dark-mode .cosmic-tab-btn:hover {
+    background-color: var(--surface-hover);
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+body.dark-mode .cosmic-tab-btn.active {
+    background: linear-gradient(135deg, #b45309 0%, #9a3412 100%);
+    color: #ffffff;
+}
+
+body.dark-mode .cosmic-links-label {
+    color: var(--burgundy);
 }
 
 body.dark-mode .journal-header-badge,

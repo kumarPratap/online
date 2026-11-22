@@ -158,12 +158,60 @@
             <li><a href="pages/music.html">Music & Soundtracks</a></li>
             <li><a href="pages/poetry.html">Poetry & Reflections</a></li>
         </ul>
-        <DIV>
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5358000896863!2d85.13687307458486!3d25.62033697744097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58504978e8f3%3A0x18cd15ae7d0e6cd!2sGolghar!5e0!3m2!1sen!2sin!4v1787931687476!5m2!1sen!2sin"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </DIV>
+        <!-- Cosmic Window & Space Exploration Map -->
+        <section class="cosmic-map-card">
+            <div class="cosmic-map-header">
+                <div class="poetry-header-titles">
+                    <span class="photo-tag tag-moment">🌌 Cosmic Window</span>
+                    <h3 class="cosmic-map-title">Celestial Landmarks & Space Exploration</h3>
+                </div>
+            </div>
+            <p class="cosmic-map-desc">
+                From cosmic impact craters on Earth to Moon mission launchpads and interactive planetary 3D views — explore the cosmos below:
+            </p>
+
+            <!-- Location Switcher Tabs -->
+            <div class="cosmic-btn-group" role="tablist" aria-label="Cosmic location selector">
+                <button type="button" class="cosmic-tab-btn active"
+                    data-src="https://maps.google.com/maps?q=Meteor+Crater+Arizona&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                    data-title="Meteor Crater, Arizona - Google Satellite Map">
+                    ☄️ Meteor Crater (Earth)
+                </button>
+                <button type="button" class="cosmic-tab-btn"
+                    data-src="https://maps.google.com/maps?q=Kennedy+Space+Center+Launch+Complex+39A&amp;t=k&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                    data-title="Kennedy Space Center Launch Pad 39A - Google Satellite Map">
+                    🚀 Moon Launchpad 39A (NASA)
+                </button>
+                <button type="button" class="cosmic-tab-btn"
+                    data-src="https://eyes.nasa.gov/apps/solar-system/#/moon"
+                    data-title="NASA Interactive 3D Moon Simulator">
+                    🌕 Interactive Moon (NASA 3D)
+                </button>
+            </div>
+
+            <!-- Responsive Embed Frame -->
+            <div class="cosmic-map-container">
+                <iframe id="cosmicMapFrame"
+                    src="https://maps.google.com/maps?q=Meteor+Crater+Arizona&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                    title="Meteor Crater, Arizona - Google Satellite Map"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- External Space 3D Links -->
+            <div class="cosmic-links-footer">
+                <span class="cosmic-links-label">Explore More in 3D:</span>
+                <a href="https://www.google.com/maps/space/moon" target="_blank" rel="noopener noreferrer" class="cosmic-ext-link">
+                    🌕 Google Maps: The Moon ↗
+                </a>
+                <span class="footer-sep">·</span>
+                <a href="https://www.google.com/maps/space/mars" target="_blank" rel="noopener noreferrer" class="cosmic-ext-link">
+                    🔴 Google Maps: Mars ↗
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
