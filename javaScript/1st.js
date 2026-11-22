@@ -201,9 +201,9 @@ themeBtn.addEventListener('click', function () {
     }
 });
 
-==========================================
-12. DOM = Document Object Model Practice
-==========================================
+// ==========================================
+// 12. DOM = Document Object Model Practice
+// ==========================================
 // Tasks:
 // 1. Select the <h1> using getElementById().
 // 2. Print its text to the console.

@@ -1,3 +1,7 @@
 {
-    "workbench.externalBrowser": "edge"
+  "terminal.integrated.env.osx": {
+    "PATH": "/opt/homebrew/bin:${env:PATH}"
+  },
+  "livePreview.customExternalBrowser": "Chrome",
+  "liveServer.settings.CustomBrowser": "chrome"
 }

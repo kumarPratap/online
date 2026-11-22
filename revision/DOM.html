@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+    <style>
+        .active {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="heading">Hello World</h1>
+        <p id="para">
+            I love JavaScript.
+        </p>
+        <input type="text" id="username" value="Harry">
+    </div>
+    <img id="photo" src="cat.png" width="250">
+
+    <div id="box">Hello</div>
+    <p id="message">Hello World</p>
+
+    <img id="photos" src="cat.png">
+
+
+    <script>
+        let myHeading = document.getElementById("heading");
+        myHeading.textContent = "Welcome to JavScript";
+
+        let para = document.getElementById("para");
+        para.style.color = "blue";
+        para.style.fontSize = "25px";
+
+        let myInput = document.getElementById("username");
+        myInput.value = "pratap";
+
+        let myPet = document.getElementById("photo");
+        myPet.setAttribute("src", "dog.png");
+        //Add the class active
+
+        let myClass = document.getElementById("box");
+
+        if (!myClass.classList.contains("active")) {
+            myClass.classList.add("active")
+
+            let myText = document.getElementById("message");
+            myText.style.color = "white";
+            myText.style.backgroundColor = "black";
+            myText.style.fontSize = "40px";
+            
+            let photos = document.getElementById("photos");
+            console.log(photos.getAttribute("src"));
+        }
+    </script>
+
+    <!-- ============================================== -->
+    <!-- PRACTICE: COMMON DOM EVENTS                    -->
+    <!-- ============================================== -->
+    <hr style="margin: 40px 0;">
+
+    <section id="event-practice" style="font-family: sans-serif; max-width: 600px; margin: auto;">
+        <h2>Common DOM Events Practice</h2>
+
+        <!-- 1. CLICK EVENT -->
+        <div style="border: 2px solid #3b82f6; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <h3>1. <code>click</code> Event</h3>
+            <p>Fires when an element is clicked.</p>
+            <button id="btn-click" style="padding: 8px 16px; cursor: pointer;">Click Me!</button>
+            <p id="click-output">Click count: 0</p>
+        </div>
+
+        <!-- 2. MOUSEOVER & MOUSEOUT EVENT -->
+        <div style="border: 2px solid #10b981; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <h3>2. <code>mouseover</code> Event</h3>
+            <p>Fires when the mouse pointer moves onto an element.</p>
+            <div id="hover-box" style="width: 200px; height: 80px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; border-radius: 6px; transition: 0.3s; cursor: pointer;">
+                Hover over me!
+            </div>
+            <p id="hover-status">Status: Mouse is outside</p>
+        </div>
+
+        <!-- 3. KEYDOWN EVENT -->
+        <div style="border: 2px solid #f59e0b; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <h3>3. <code>keydown</code> Event</h3>
+            <p>Fires when a key is pressed down on the keyboard.</p>
+            <input type="text" id="key-input" placeholder="Type something here..." style="padding: 8px; width: 80%; border: 1px solid #ccc; border-radius: 4px;">
+            <p id="key-output">Last key pressed: <strong>None</strong></p>
+        </div>
+
+        <!-- 4. SUBMIT EVENT -->
+        <div style="border: 2px solid #ef4444; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <h3>4. <code>submit</code> Event</h3>
+            <p>Fires when a form is submitted (use <code>e.preventDefault()</code> to stop page reload!).</p>
+            <form id="practice-form">
+                <input type="text" id="form-name" placeholder="Enter your name" required style="padding: 6px; margin-right: 8px;">
+                <button type="submit" style="padding: 6px 12px; cursor: pointer;">Submit Form</button>
+            </form>
+            <p id="form-output" style="color: #059669; font-weight: bold; margin-top: 10px;"></p>
+        </div>
+    </section>
+
+    <script>
+        // ==========================================
+        // 1. CLICK EVENT
+        // ==========================================
+        let count = 0;
+        let clickBtn = document.getElementById("btn-click");
+        let clickOutput = document.getElementById("click-output");
+
+        clickBtn.addEventListener("click", function () {
+            count++;
+            clickOutput.textContent = `Click count: ${count}`;
+            clickBtn.style.backgroundColor = count % 2 === 0 ? "#3b82f6" : "#2563eb";
+            clickBtn.style.color = "white";
+        });
+
+        // ==========================================
+        // 2. MOUSEOVER (and MOUSEOUT) EVENT
+        // ==========================================
+        let hoverBox = document.getElementById("hover-box");
+        let hoverStatus = document.getElementById("hover-status");
+
+        // When mouse enters the element
+        hoverBox.addEventListener("mouseover", function () {
+            hoverBox.style.backgroundColor = "#10b981";
+            hoverBox.style.color = "white";
+            hoverBox.textContent = "You're hovering! 🎉";
+            hoverStatus.textContent = "Status: Mouse is inside the box!";
+        });
+
+        // When mouse leaves the element (good companion to mouseover!)
+        hoverBox.addEventListener("mouseout", function () {
+            hoverBox.style.backgroundColor = "#e5e7eb";
+            hoverBox.style.color = "black";
+            hoverBox.textContent = "Hover over me!";
+            hoverStatus.textContent = "Status: Mouse left the box.";
+        });
+
+        // ==========================================
+        // 3. KEYDOWN EVENT
+        // ==========================================
+        let keyInput = document.getElementById("key-input");
+        let keyOutput = document.getElementById("key-output");
+
+        keyInput.addEventListener("keydown", function (event) {
+            // 'event.key' tells you which key was pressed (e.g., 'Enter', 'a', 'Backspace')
+            keyOutput.innerHTML = `Last key pressed: <strong>${event.key}</strong> (Key Code: ${event.code})`;
+        });
+
+        // ==========================================
+        // 4. SUBMIT EVENT
+        // ==========================================
+        let form = document.getElementById("practice-form");
+        let formName = document.getElementById("form-name");
+        let formOutput = document.getElementById("form-output");
+
+        form.addEventListener("submit", function (event) {
+            // By default, submitting a form refreshes the page!
+            // preventDefault() stops the browser from refreshing so we can handle it with JS.
+            event.preventDefault();
+
+            let nameEntered = formName.value;
+            formOutput.textContent = `Form submitted successfully! Welcome, ${nameEntered}!`;
+
+            // Reset the input field
+            formName.value = "";
+        });
+    </script>
+</body>
+
+</html>
