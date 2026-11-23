@@ -70,3 +70,26 @@ function updateClock() {
 // Start the clock
 updateClock();
 setInterval(updateClock, 1000);
+
+
+// =============================================
+//  Cosmic Landmark / Moon Map Switcher
+// =============================================
+const cosmicTabBtns = document.querySelectorAll('.cosmic-tab-btn');
+const cosmicMapFrame = document.getElementById('cosmicMapFrame');
+
+if (cosmicTabBtns.length > 0 && cosmicMapFrame) {
+    cosmicTabBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            cosmicTabBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const targetSrc = this.getAttribute('data-src');
+            const targetTitle = this.getAttribute('data-title');
+            if (targetSrc) {
+                cosmicMapFrame.src = targetSrc;
+                if (targetTitle) cosmicMapFrame.title = targetTitle;
+            }
+        });
+    });
+}
+
